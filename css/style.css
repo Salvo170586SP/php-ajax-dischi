@@ -1,0 +1,22 @@
+body{
+    background-color: #1E2D3B;
+}
+
+header {
+    height: 100px;
+    background-color: #2e3a46;
+}
+
+h5 {
+    color: white;
+}
+  
+span,
+data {
+    color: #6e777d;
+    font-weight: bold;
+}
+
+figure {
+height: 100px;
+}
