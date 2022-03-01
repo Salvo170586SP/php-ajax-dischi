@@ -22,13 +22,13 @@
     <main class="container box-card d-flex justify-content-center flex-wrap my-3">
         <div class="row">
             <!-- card -->
-                <div  class="album-card col-6 col-md-3 col-lg-2 text-center shadow">
+                <div v-for="album in albums" class="album-card col-6 col-md-3 col-lg-2 text-center shadow">
                     <figure>
                         <img class="img-fluid p-3" :src="album.poster" alt="" />
                     </figure>
-                    <h5></h5>  
-                    <span class="autore"></span><br />
-                    <data class="anno"></data>
+                    <h5>{{album.title}}</h5>  
+                    <span class="autore">{{album.author}}</span><br />
+                    <data class="anno">{{album.year}}</data>
                 </div>
         </div>
     </main>
