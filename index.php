@@ -1,4 +1,48 @@
-<?php
+<?php 
+    $albums = [
+        [
+            'title' => 'New Jersey',
+            'author' => 'Bon Jovi',
+            'year' => 1988,
+            'poster' => 'https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg',
+            'genre' => 'Rock'
+        ],
+        [
+            'title' => 'Live at Wembley 86',
+            'author' => 'Queen',
+            'year' => 1992,
+            'poster' => 'https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg',
+            'genre' => 'Pop'
+        ],
+        [
+            'title' => 'Ten\'s Summoner\'s Tales',
+            'author' => 'Sting',
+            'year' => 1993,
+            'poster' => 'https://images-na.ssl-images-amazon.com/images/I/411BQR6BHRL.jpg',
+            'genre' => 'Pop'
+        ],
+        [
+            'title' => 'Steve Gadd band',
+            'author' => 'Steve Gadd Band',
+            'year' => 2018,
+            'poster' => 'https://m.media-amazon.com/images/I/81UtLzBDoEL._SS500_.jpg',
+            'genre' => 'Jazz'
+        ],
+        [
+            'title' => 'Brave new World',
+            'author' => 'Iron Maiden',
+            'year' => 2000,
+            'poster' => 'https://upload.wikimedia.org/wikipedia/en/0/03/Iron_Maiden_-_Brave_New_World.jpg',
+            'genre' => 'Metal'
+        ],
+        [
+            'title' => 'One more car, one more rider',
+            'author' => 'Eric Clapton',
+            'year' => 2002,
+            'poster' => 'https://images-na.ssl-images-amazon.com/images/I/81MDAIdh78L._SY355_.jpg',
+            'genre' => 'Rock'
+        ]
+    ];
 
 ?>
 
@@ -6,11 +50,9 @@
 
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,29 +61,33 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
-<header>
-    <div class="container d-flex justify-content-between align-items-center">
-      <figure>
-        <img
-          class="h-100 p-2"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/768px-Spotify_logo_without_text.svg.png"
-          alt="Spotify Logo"
-        />
-      </figure>
-    </div>
-  </header>
-  <main>
-    <figure>
-      <img class="img-fluid p-3" src="" alt="" />
-    </figure>
-    <h5></h5>
 
-    <span class="autore"></span
-    ><br />
-    <data class="anno"></data>
-  </main>
+<body>
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <figure>
+                <img class="h-100 p-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/768px-Spotify_logo_without_text.svg.png" alt="Spotify Logo" />
+            </figure>
+        </div>
+    </header>
+    <main class="container box-card d-flex justify-content-center flex-wrap my-3">
+        <div class="row">
+            <?php foreach ($albums as $album) { ?>
+                <div class="album-card col-6 col-md-3 col-lg-2 text-center shadow">
+                    <figure>
+                        <img class="img-fluid p-3" src="<?php echo $album['poster'] ?>" alt="" />
+                    </figure>
+                    <h5><?php echo $album['title'] ?></h5>
+    
+                    <span class="autore"><?php echo $album['author'] ?></span><br />
+                    <data class="anno"><?php echo $album['year'] ?></data>
+    
+                </div>
+            <?php } ?>
+        </div>
+    </main>
 
 
 </body>
+
 </html>

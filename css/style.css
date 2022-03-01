@@ -7,6 +7,10 @@ header {
     background-color: #2e3a46;
 }
 
+header figure {
+height: 100px;
+}
+
 h5 {
     color: white;
 }
@@ -15,8 +19,4 @@ span,
 data {
     color: #6e777d;
     font-weight: bold;
-}
-
-figure {
-height: 100px;
 }
